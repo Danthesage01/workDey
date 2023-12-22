@@ -1,20 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
+import { useEffect, useState } from "react";
+import StackNavigator from "./src/navigations/StackNavigators/StackNavigator";
+import AuthNavigator from "./src/HOC/AuthNavigator";
+import { Provider, useDispatch, useSelector } from "react-redux";
+import { store } from "./store";
+import { selectFromAuth, setAuth } from "./src/features/auth/authSlice";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export default function App() {
+function Navigation() {
+  const dispatch = useDispatch();
+  const auth = useSelector(selectFromAuth);
+  console.log(auth, "AUTH");
+  // const [isAuth, setIsAuth] = useState(false);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const jsonData = await AsyncStorage.getItem("userData");
+        if (jsonData !== null) {
+          const data = JSON.parse(jsonData);
+          dispatch(setAuth(data));
+        }
+      } catch (error) {
+        throw new Error(error);
+      }
+    };
+    getData();
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <StatusBar style="default" />
+      {auth?.token ? <AuthNavigator /> : <StackNavigator />}
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+  return (
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
+  );
+}

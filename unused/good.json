@@ -1,0 +1,50 @@
+{
+    "status": "success",
+    "message": "Registration successful",
+    "data": {
+        "user": {
+            "first_name": "Dan",
+            "last_name": "Sage",
+            "email": "One4@gmail.com",
+            "phone": "08073939906",
+            "uid": "16",
+            "updated_at": "2023-12-21T21:30:12.000000Z",
+            "created_at": "2023-12-21T21:30:12.000000Z",
+            "image": "http://ec2-18-191-219-31.us-east-2.compute.amazonaws.com:8000",
+            "artisan": null
+        },
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9lYzItMTgtMTkxLTIxOS0zMS51cy1lYXN0LTIuY29tcHV0ZS5hbWF6b25hd3MuY29tOjgwMDBcL3YxXC9yZWdpc3RlciIsImlhdCI6MTcwMzE5NDIxMiwiZXhwIjoxNzAzMTk3ODEyLCJuYmYiOjE3MDMxOTQyMTIsImp0aSI6InpvOGl5cnJBbUEzbWg0SEMiLCJzdWIiOiI5YjVmMTRiNS1lZmZlLTRiYjktOWI5Yy03M2FlNjU0MTVkNzkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.PL75tm-qeO-kMxOUFIZtN5BYR5IURv6cD3tO77DeITk",
+        "token_type": "bearer",
+        "expires_in": 86400,
+        "categories": [
+            {
+                "id": 4,
+                "uid": "95314e0f-e805-4426-9d0c-e03038e47255",
+                "name": "facility-management",
+                "image": null,
+                "is_active": 1
+            },
+            {
+                "id": 3,
+                "uid": "21aa8011-7178-412e-9eb1-e2392b259fbe",
+                "name": "manson",
+                "image": null,
+                "is_active": 1
+            },
+            {
+                "id": 2,
+                "uid": "71a61a1d-8adf-4f51-a547-21a2a88630c2",
+                "name": "capenter",
+                "image": null,
+                "is_active": 1
+            },
+            {
+                "id": 1,
+                "uid": "93f22f5d-b093-4334-9c99-1fda3e313cfa",
+                "name": "plumbing",
+                "image": null,
+                "is_active": 1
+            }
+        ]
+    }
+}
