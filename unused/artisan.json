@@ -1,0 +1,70 @@
+{
+ "categories": [
+  {
+   "id": 4,
+   "image": null,
+   "is_active": 1,
+   "name": "facility-management",
+   "uid": "95314e0f-e805-4426-9d0c-e03038e47255"
+  },
+  {
+   "id": 3,
+   "image": null,
+   "is_active": 1,
+   "name": "manson",
+   "uid": "21aa8011-7178-412e-9eb1-e2392b259fbe"
+  },
+  {
+   "id": 2,
+   "image": null,
+   "is_active": 1,
+   "name": "capenter",
+   "uid": "71a61a1d-8adf-4f51-a547-21a2a88630c2"
+  },
+  {
+   "id": 1,
+   "image": null,
+   "is_active": 1,
+   "name": "plumbing",
+   "uid": "93f22f5d-b093-4334-9c99-1fda3e313cfa"
+  }
+ ],
+ "expires_in": 86400,
+ "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9lYzItMTgtMTkxLTIxOS0zMS51cy1lYXN0LTIuY29tcHV0ZS5hbWF6b25hd3MuY29tOjgwMDBcL3YxXC9sb2dpbiIsImlhdCI6MTcwMzI0NzAzOCwiZXhwIjoxNzAzMjUwNjM4LCJuYmYiOjE3MDMyNDcwMzgsImp0aSI6ImxFU0JTR0c3NTB6SDlkTUwiLCJzdWIiOiIyNmIzYmU0Yy1hMTRkLTRlYjItOGQzOS04YjBiOGFjYTliZjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.WaTw4ptSFV09GW49kNjmun8XMtX2C1A-QxSrhjtcNWw",
+ "token_type": "bearer",
+ "user": {
+  "artisan": {
+   "address": "abv 001 lane 2",
+   "created_at": "2023-12-02T19:23:41.000000Z",
+   "display_name": "test-vendor",
+   "id": 1,
+   "is_active": 1,
+   "phone": "0987654321",
+   "state_id": null,
+   "uid": "ffbea8ee-8f84-404f-8e6c-c88174003a89",
+   "updated_at": "2023-12-02T19:23:41.000000Z",
+   "user_id": "26b3be4c-a14d-4eb2-8d39-8b0b8aca9bf1",
+   "username": "testvendor"
+  },
+  "countdown_reset_otp": null,
+  "countdown_reset_password": null,
+  "created_at": "2023-12-02T19:23:41.000000Z",
+  "device_firebase_token": null,
+  "dob": null,
+  "email": "artisan@app.com",
+  "email_verified_at": "2023-12-02T19:23:41.000000Z",
+  "first_name": "Artisan1",
+  "id": 1,
+  "image": "http://ec2-18-191-219-31.us-east-2.compute.amazonaws.com:8000/user_default.jpg",
+  "is_active": true,
+  "is_disabled": 0,
+  "last_name": "User",
+  "otp": null,
+  "phone": "2348128039141",
+  "photo": "user_default.jpg",
+  "remember_token": null,
+  "status": "active",
+  "uid": "26b3be4c-a14d-4eb2-8d39-8b0b8aca9bf1",
+  "updated_at": "2023-12-02T19:23:41.000000Z"
+ }
+}

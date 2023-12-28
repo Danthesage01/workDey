@@ -12,15 +12,18 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 import { FontAwesome5, Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { selectFromAuth } from "../../features/auth/authSlice";
 const HomeScreen = () => {
   const navigation = useNavigation();
-  const { user } = useSelector((state) => state.auth);
+  const auth = useSelector(selectFromAuth);
   return (
     <ScrollView style={styles.container}>
       <View style={[styles.row, styles.rowWrapper]}>
         <View>
           <Text style={styles.subtitle}>Welcome</Text>
-          <Text style={styles.headerText}>Benjamin M.</Text>
+          <Text style={styles.headerText}>
+            {auth.user.first_name} {auth.user.last_name}
+          </Text>
         </View>
         <Pressable
           onPress={() => {
@@ -154,6 +157,48 @@ const HomeScreen = () => {
           <Text>Chores</Text>
         </View>
       </ScrollView>
+      <View style={[styles.view, styles.row, styles.rowWrapper]}>
+        <Text style={styles.sectionText}>Recently Contacted</Text>
+      </View>
+      <ScrollView
+        horizontal={true}
+        indicatorStyle="white"
+        showsHorizontalScrollIndicator={false}
+        style={{}}
+      >
+        <View style={styles.column}>
+          <View style={styles.roundedImgWrapper}>
+            <Image
+              source={require("../../../assets/service-img1.png")}
+              style={styles.roundedImg}
+            />
+          </View>
+        </View>
+        <View style={styles.column}>
+          <View style={styles.roundedImgWrapper}>
+            <Image
+              source={require("../../../assets/service-img2.png")}
+              style={styles.roundedImg}
+            />
+          </View>
+        </View>
+        <View style={styles.column}>
+          <View style={styles.roundedImgWrapper}>
+            <Image
+              source={require("../../../assets/service-img3.png")}
+              style={styles.roundedImg}
+            />
+          </View>
+        </View>
+        <View style={styles.column}>
+          <View style={styles.roundedImgWrapper}>
+            <Image
+              source={require("../../../assets/service-img1.png")}
+              style={styles.roundedImg}
+            />
+          </View>
+        </View>
+      </ScrollView>
     </ScrollView>
   );
 };
@@ -195,6 +240,7 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 18,
     fontWeight: "900",
+    textTransform: "capitalize",
     marginTop: -10,
   },
   sectionText: {
@@ -260,6 +306,18 @@ const styles = StyleSheet.create({
   serviceImg: {
     width: "100%",
     borderRadius: 6,
+    objectFit: "fill",
+  },
+  roundedImgWrapper: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    marginRight: 20,
+  },
+  roundedImg: {
+    width: "100%",
+    height: "100%",
+    borderRadius: 100,
     objectFit: "fill",
   },
   button: {

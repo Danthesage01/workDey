@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     borderWidth: 1,
     borderColor: "#1861D9",
-    minWidth: "80%",
+    minWidth: "70%",
     backgroundColor: "#1861D9",
   },
   pressed: {

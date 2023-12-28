@@ -4,10 +4,10 @@ import ProviderNavigator from "../navigations/providerNavigators/providerNavigat
 import { useSelector } from "react-redux";
 import { selectFromAuth } from "../features/auth/authSlice";
 const AuthNavigator = () => {
-  // const data = useSelector(selectFromAuth)
-
-  const [appUser, setAppUser] = useState("user");
-  return appUser === "user" ? <UserNavigator /> : <ProviderNavigator />;
+  const auth = useSelector(selectFromAuth);
+  return auth.user.artisan === null ? <UserNavigator /> : <ProviderNavigator />;
+  // const [appUser, setAppUser] = useState("user");
+  // return appUser === "user" ? <UserNavigator /> : <ProviderNavigator />;
 };
 
 export default AuthNavigator;

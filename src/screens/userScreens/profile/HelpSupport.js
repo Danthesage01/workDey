@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const PostRequestScreen = () => {
+const HelpSupport = () => {
   return (
     <View>
-      <Text>PostRequestScreen</Text>
+      <Text>HelpSupport</Text>
     </View>
   );
 };
 
-export default PostRequestScreen;
+export default HelpSupport;

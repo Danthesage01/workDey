@@ -67,7 +67,12 @@ const UserLoginScreen = () => {
         try {
           const jsonData = JSON.stringify(data);
           await AsyncStorage.setItem("userData", jsonData);
-          navigation.navigate("UserAuthOverview");
+          if (data.user.artisan === null) {
+            navigation.navigate("UserAuthOverview");
+          }
+          if (data.user.artisan) {
+            navigation.navigate("ProviderAuthOverview");
+          }
         } catch (error) {
           throw new Error(error);
         }

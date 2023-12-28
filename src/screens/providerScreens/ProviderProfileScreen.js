@@ -1,80 +1,40 @@
-import {
-  View,
-  Text,
-  Button,
-  Image,
-  StyleSheet,
-  Pressable,
-  ScrollView,
-  TextInput,
-} from "react-native";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 import React from "react";
+import { AntDesign } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
-import { useSelector } from "react-redux";
-import { FontAwesome5, Ionicons, MaterialIcons } from "@expo/vector-icons";
-import { selectFromAuth } from "../../features/auth/authSlice";
-const HomeScreen = () => {
+
+const ProfileScreen = () => {
   const navigation = useNavigation();
-  const auth = useSelector(selectFromAuth);
+  const logout = async () => {
+    try {
+      await AsyncStorage.removeItem("userData");
+      navigation.navigate("/");
+      // navigation.reset();
+
+      console.log("first");
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
   return (
-    <ScrollView style={styles.container}>
-      <View style={[styles.row, styles.rowWrapper, styles.view]}>
-        <View>
-          <Text style={styles.subtitle}>Welcome</Text>
-          <Text style={styles.headerText}>
-            {auth.user.first_name} {auth.user.last_name}
-          </Text>
-        </View>
-        <Pressable
-          onPress={() => {
-            console.log("pressed");
-          }}
-        >
-          <FontAwesome5
-            name="bell"
-            size={24}
-            color="black"
-          />
-        </Pressable>
-      </View>
-      <View style={[styles.row, styles.rowWrapper, styles.extra_view]}>
-        <View style={styles.locationStyle}>
-          <Ionicons
-            name="location"
-            size={18}
-            color="blue"
-          />
-          <Text>Wuse Nigeria</Text>
-        </View>
-
-        <Pressable
-          onPress={() => {
-            console.log("pressed");
-          }}
-        >
-          <Text style={styles.changeLocation}>Change Location</Text>
-        </Pressable>
-      </View>
-
-      <View style={[styles.view, styles.row, styles.rowWrapper]}>
-        <Text style={styles.sectionText}>Appointments</Text>
-        <Pressable
-          onPress={() => {}}
-          style={[styles.row, styles.rowWrapper]}
-        >
-          <Text style={styles.viewAllText}>View all</Text>
-          <Ionicons
-            name="arrow-forward"
-            size={24}
-            color="#1861D9"
-          />
-        </Pressable>
-      </View>
-    </ScrollView>
+    <View>
+      <Pressable
+        onPress={logout}
+        style={{}}
+      >
+        <Text>Logout</Text>
+        <AntDesign
+          name="logout"
+          size={24}
+          color="#1861D9"
+        />
+      </Pressable>
+    </View>
   );
 };
 
-export default HomeScreen;
+export default ProfileScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -85,10 +45,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   view: {
-    marginVertical: 25,
-  },
-  extra_view: {
-    marginVertical: 25,
+    marginVertical: 15,
   },
   image: {
     flex: 0.7,
@@ -114,7 +71,6 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 18,
     fontWeight: "900",
-    textTransform: "capitalize",
     marginTop: -10,
   },
   sectionText: {

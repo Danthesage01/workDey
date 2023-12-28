@@ -1,0 +1,58 @@
+{
+ "categories": [
+  {
+   "id": 4,
+   "image": null,
+   "is_active": 1,
+   "name": "facility-management",
+   "uid": "95314e0f-e805-4426-9d0c-e03038e47255"
+  },
+  {
+   "id": 3,
+   "image": null,
+   "is_active": 1,
+   "name": "manson",
+   "uid": "21aa8011-7178-412e-9eb1-e2392b259fbe"
+  },
+  {
+   "id": 2,
+   "image": null,
+   "is_active": 1,
+   "name": "capenter",
+   "uid": "71a61a1d-8adf-4f51-a547-21a2a88630c2"
+  },
+  {
+   "id": 1,
+   "image": null,
+   "is_active": 1,
+   "name": "plumbing",
+   "uid": "93f22f5d-b093-4334-9c99-1fda3e313cfa"
+  }
+ ],
+ "expires_in": 86400,
+ "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9lYzItMTgtMTkxLTIxOS0zMS51cy1lYXN0LTIuY29tcHV0ZS5hbWF6b25hd3MuY29tOjgwMDBcL3YxXC9sb2dpbiIsImlhdCI6MTcwMzI0NjEyMSwiZXhwIjoxNzAzMjQ5NzIxLCJuYmYiOjE3MDMyNDYxMjEsImp0aSI6ImpXd096RDNCQUM4alc0U2QiLCJzdWIiOiI3MTBjODliNi05MzAzLTRlZTQtYjFlNy1mYWZjMWIyNzc5NDIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.slCYEbPic7ioFgNWn1IqE1fdwuySMRwSSQefl36JpbQ",
+ "token_type": "bearer",
+ "user": {
+  "artisan": null,
+  "countdown_reset_otp": null,
+  "countdown_reset_password": null,
+  "created_at": "2023-12-02T19:23:41.000000Z",
+  "device_firebase_token": null,
+  "dob": null,
+  "email": "user@app.com",
+  "email_verified_at": "2023-12-02T19:23:41.000000Z",
+  "first_name": "John",
+  "id": 4,
+  "image": "http://ec2-18-191-219-31.us-east-2.compute.amazonaws.com:8000/user_default.jpg",
+  "is_active": true,
+  "is_disabled": 0,
+  "last_name": "wick",
+  "otp": null,
+  "phone": "2348128039434",
+  "photo": "user_default.jpg",
+  "remember_token": null,
+  "status": "active",
+  "uid": "710c89b6-9303-4ee4-b1e7-fafc1b277942",
+  "updated_at": "2023-12-02T19:23:41.000000Z"
+ }
+}

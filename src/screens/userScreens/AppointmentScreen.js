@@ -1,12 +1,31 @@
-import { View, Text } from "react-native";
-import React from "react";
+import * as React from "react";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import UpcomingScreen from "./appointments/UpcomingScreen";
+import PendingScreen from "./appointments/PendingScreen";
+import CompletedScreen from "./appointments/CompletedScreen";
 
-const AppointmentScreen = () => {
+const Tab = createMaterialTopTabNavigator();
+
+export default function AppointmentScreen() {
   return (
-    <View>
-      <Text>AppointmentScreen</Text>
-    </View>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: "#1861d9",
+        tabBarInactiveTintColor: "#505050",
+      }}
+    >
+      <Tab.Screen
+        name="UPCOMING"
+        component={UpcomingScreen}
+      />
+      <Tab.Screen
+        name="PENDING"
+        component={PendingScreen}
+      />
+      <Tab.Screen
+        name="COMPLETED"
+        component={CompletedScreen}
+      />
+    </Tab.Navigator>
   );
-};
-
-export default AppointmentScreen;
+}
